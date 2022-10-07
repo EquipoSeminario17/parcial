@@ -1,3 +1,6 @@
+<?php
+  include 'bd/conexion.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,32 +35,34 @@
 	<div id="app">mi aplicacion</div>
  <br><br><br>
  <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Id
+             <label for="validationCustom01" class="form-label">id
              </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" id="nombre" name="nombre">
+             
+   <form action="proceso.php" method="POST">
+            <input type="text" id="id_Animales" name="id_Animales">
            
           
         </div>
          <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Nombre
+             <label for="validationCustom01" class="form-label">animal
              </label>
-            <input type="text" id="nombre" name="nombre">
+            <input type="text" id="nombre_Animal" name="nombre_Animal">
            
            
           
         </div>
          <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Precio
+             <label for="validationCustom01" class="form-label">cantidad
              </label>&nbsp;&nbsp;&nbsp;
-            <input type="text" id="nombre" name="nombre">
+            <input type="number" id="cantidad" name="cantidad">
            
            
           
         </div>
         <div class="form-outline">
-             <label for="validationCustom01" class="form-label">Otro
+             <label for="validationCustom01" class="form-label">peso
              </label>&nbsp;&nbsp;&nbsp;
-            <input type="number" id="nombre" name="nombre">
+            <input type="number" id="categoria" name="categoria">
            
            
           
@@ -66,7 +71,7 @@
  <div align="center" class="container" id="container1">
         
         <br><br><br><br><br><br><br>
-        <button type="button" class="btn btn-primary" id="btn1">Opcion1</button>&nbsp;
+       <a type="button" class="btn btn-succes" id="btn1" href="register.php">Registrar</a>&nbsp;&nbsp;
         <button type="button" class="btn btn-primary" id="btn2">opcion2</button>&nbsp;
         <button type="button" class="btn btn-primary" id="btn3">opcion3</button>
 <br><br>
@@ -79,6 +84,10 @@
 </fieldset>
   
 </div>
- 
+ <script>
+  $(function () {
+    bsCustomFileInput.init();
+  });
+  </script>
 </body>
 </html>
